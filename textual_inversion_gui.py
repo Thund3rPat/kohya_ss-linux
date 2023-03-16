@@ -226,7 +226,7 @@ def open_configuration(
             my_data_db = json.load(f)
             print('Loading config...')
             # Update values to fix deprecated use_8bit_adam checkbox and set appropriate optimizer if it is set to True
-            my_data = update_optimizer(my_data)
+            my_data = update_optimizer(my_data_db)
     else:
         file_path = original_file_path  # In case a file_path was provided and the user decide to cancel the open action
         my_data_db = {}
